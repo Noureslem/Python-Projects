@@ -23,8 +23,12 @@ class Rectangle:
 
     def get_picture(self):
         if self.width > 50 or self.height > 50:
-            return "Too big for picture.\n"
+            return "Too big for picture."
 
+        picture = ""
+        for _ in range(self.height):
+            picture += "*" * self.width + "\n"
+        return picture
         picture = ""
         for _ in range(self.height):
             picture += "*" * self.width + "\n"
@@ -54,4 +58,4 @@ class Square(Rectangle):
         self.height = side
 
     def __repr__(self):
-        return f"Square(side={self.side})"
+        return f"Square(side={self.width})"
